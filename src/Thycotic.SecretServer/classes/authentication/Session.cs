@@ -136,10 +136,9 @@ namespace Thycotic.PowerShell.Authentication
     }
     public class Request
     {
-        public static RestResponse AccessToken(string SecretServerHost, string Username, string Password, string ProxyServer, int Timeout = 0)
+        public static RestResponse AccessToken(string SecretServerHost, string Username, string Password, string ProxyServer)
         {
 			var options = new RestClientOptions(SecretServerHost + "/oauth2/token");
-			options.MaxTimeout = Timeout;
 
 			if (string.IsNullOrEmpty(ProxyServer))
 			{
@@ -155,10 +154,9 @@ namespace Thycotic.PowerShell.Authentication
 			return response;
 		}
 
-        public static RestResponse RefreshToken(string SecretServerHost, string TokenValue, string ProxyServer, int Timeout = 0)
+        public static RestResponse RefreshToken(string SecretServerHost, string TokenValue, string ProxyServer)
         {
 			var options = new RestClientOptions(SecretServerHost + "/oauth2/token");
-			options.MaxTimeout = Timeout;
 
 			if (string.IsNullOrEmpty(ProxyServer))
 			{
