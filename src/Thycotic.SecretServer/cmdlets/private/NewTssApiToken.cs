@@ -47,7 +47,6 @@ namespace Thycotic.SecretServer
 			var options = new RestClientOptions();
 			Uri requestUri = new Uri(Uri);
 			options.BaseUrl = requestUri;
-			options.MaxTimeout = Timeout;
 
 			WriteVerbose("Base URL set to: " + requestUri);
             WriteVerbose("Request timeout set to : " + Timeout);

@@ -92,8 +92,7 @@ namespace Thycotic.SecretServer.Cmdlets
 			var options = new RestClientOptions();
 			Uri requestUri = new Uri(Uri);
 			options.BaseUrl = requestUri;
-			options.MaxTimeout = Timeout;
-            
+
 			if (MyInvocation.BoundParameters.ContainsKey("Proxy"))
             {
 				options.Proxy = new WebProxy(Proxy);
