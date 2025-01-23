@@ -10,7 +10,7 @@ if ($PSEdition -eq 'Desktop') {
 }
 
 if ($MyInvocation.ScriptName -notlike '*Invoke-Build.ps1') {
-    $InvokeBuildVersion = '5.8.4'
+    $InvokeBuildVersion = '5.11.3'
     $ErrorActionPreference = 'Stop'
     try {
         Import-Module InvokeBuild -RequiredVersion $InvokeBuildVersion

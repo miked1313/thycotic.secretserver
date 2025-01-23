@@ -15,7 +15,7 @@ $script:Version = $Manifest.ModuleVersion
 
 # Ensure and call the module.
 if ($MyInvocation.ScriptName -notlike '*Invoke-Build.ps1') {
-    $InvokeBuildVersion = '5.7.3'
+    $InvokeBuildVersion = '5.11.3'
     $ErrorActionPreference = 'Stop'
     try {
         Import-Module InvokeBuild -RequiredVersion $InvokeBuildVersion
