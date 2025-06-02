@@ -17,5 +17,7 @@ namespace Thycotic.PowerShell.Groups
         public string UserDomainName { get; set; }
         public int UserId { get; set; }
         public string Username { get; set; }
+        public bool isPlatform { get; set; }
+        public bool isEditable { get; set; }
     }
 }
